@@ -1,0 +1,14 @@
+<section>
+  <div>
+    <select (change)="onCuisinesChange($event)">
+      <option disabled selected>--Select Your Cuisines</option>
+      <option>Italian</option>
+      <option>Mexican</option>
+    </select>
+  </div>
+  <ul *ngIf="cuisines">
+    <li>{{ Appetizer }}</li>
+    <li>{{ Dessert }}</li>
+    <li>{{ MainCourse }}</li>
+  </ul>
+</section>
