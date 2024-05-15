@@ -1,4 +1,6 @@
-import { Appetizer, MainCourse, Dessert } from '../interfaces/dishes';
+import { Appetizer } from './appetizer';
+import { Dessert } from './dessert';
+import { MainCourse } from './mainCourse';
 
 /**
  * Interface representing a restaurant factory for creating different types of dishes.

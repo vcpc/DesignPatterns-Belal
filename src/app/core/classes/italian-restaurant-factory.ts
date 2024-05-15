@@ -1,19 +1,19 @@
-import { Appetizer, Dessert, MainCourse } from '../interfaces/dishes';
+import { Appetizer } from '../interfaces/appetizer';
+import { Dessert } from '../interfaces/dessert';
+import { MainCourse } from '../interfaces/mainCourse';
 import { Restaurants } from '../interfaces/restaurant';
-import {
-  italianAppetizer,
-  italianDessert,
-  italianMainCourse,
-} from './ItalianRestaurant';
+import { ItalianAppetizer } from './ItalianAppetizer';
+import { ItalianDessert } from './ItalianDessert';
+import { ItalianMainCourse } from './ItalianMainCourse';
 
 export class ItalianRestaurantFactory implements Restaurants {
   createAppetizer(): Appetizer {
-    return italianAppetizer;
+    return ItalianAppetizer;
   }
   createDessert(): Dessert {
-    return italianMainCourse;
+    return ItalianMainCourse;
   }
   createMainCourse(): MainCourse {
-    return italianDessert;
+    return ItalianDessert;
   }
 }
