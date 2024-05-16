@@ -14,9 +14,9 @@ import { FormsModule } from '@angular/forms';
 })
 export class AbstractFactoryComponent {
   /**
-   * @property {string} clintCuisine to detect the clint choosen restaurant
+   * @property {string} clientCuisine to detect the clint choosen restaurant
    */
-  clintCuisine: string = '';
+  clientCuisine: string = '';
   /**
    * @property {Restaurants} cuisines to choose class to choose cusines
    */
@@ -40,9 +40,9 @@ export class AbstractFactoryComponent {
    * making the making the choices between only two options making the possibility for the client to choose any unknown restaurants zero
    */
   onCuisinesChange(): void {
-    if (this.clintCuisine === 'Italian') {
+    if (this.clientCuisine === 'Italian') {
       this.cuisines = new ItalianRestaurantFactory();
-    } else if (this.clintCuisine === 'Mexican') {
+    } else if (this.clientCuisine === 'Mexican') {
       this.cuisines = new MexicanRestaurantFactory();
     } else {
       alert(
