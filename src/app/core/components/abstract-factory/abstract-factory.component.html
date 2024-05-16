@@ -1,0 +1,17 @@
+<section>
+  <div>
+    <!-- using ngModel to detect user select cuisine and change method to review the result for his cuisine -->
+    <select [(ngModel)]="clintCuisine" (change)="onCuisinesChange()">
+      <option disabled selected value="">--Select Your Cuisines</option>
+      <option>Italian</option>
+      <option>Mexican</option>
+    </select>
+  </div>
+  <!-- hidden with ngIf till the user select a cuisine -->
+  <ul *ngIf="cuisines">
+    <li>{{ Appetizer }}</li>
+    <li>{{ Dessert }}</li>
+    <li>{{ MainCourse }}</li>
+  </ul>
+</section>
+<!-- End Cuisine -->
