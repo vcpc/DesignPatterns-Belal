@@ -1,9 +1,9 @@
+import { RestaurantFactory } from './../../interfaces/restaurantFactory';
 import { Component } from '@angular/core';
 import { ItalianRestaurantFactory } from '../../classes/italian-restaurant-factory';
 import { MexicanRestaurantFactory } from '../../classes/mexican-restaurant-factory';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
-import { RestaurantsFactory } from '../../interfaces/restaurantFactory';
 
 @Component({
   selector: 'app-abstract-factory',
@@ -20,7 +20,7 @@ export class AbstractFactoryComponent {
   /**
    * @property {Restaurants} cuisines to choose class to choose cusines
    */
-  cuisines!: RestaurantsFactory;
+  cuisines!: RestaurantFactory;
   /**
    * @property {string} Appetizer one of the cuisines dishes value set depend on choosen cuisine
    */
@@ -44,6 +44,11 @@ export class AbstractFactoryComponent {
       this.cuisines = new ItalianRestaurantFactory();
     } else if (this.clintCuisine === 'Mexican') {
       this.cuisines = new MexicanRestaurantFactory();
+    } else {
+      alert(
+        'Not Valid Cuisines Name Please Select From The DropDown Options Only'
+      );
+      location.reload();
     }
     this.Appetizer = this.cuisines.createAppetizer().name;
     this.Dessert = this.cuisines.createDessert().name;
