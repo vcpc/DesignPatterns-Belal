@@ -5,7 +5,7 @@ import { MainCourse } from './mainCourse';
 /**
  * Interface representing a restaurant factory for creating different types of dishes.
  */
-export interface RestaurantsFactory {
+export interface RestaurantFactory {
   /**
    * Creates a appetizer dish.
    */
