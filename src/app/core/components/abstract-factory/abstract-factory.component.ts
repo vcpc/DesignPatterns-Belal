@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { Restaurants } from '../../interfaces/restaurant';
+import { Restaurants } from '../../interfaces/restaurantFactory';
 import { ItalianRestaurantFactory } from '../../classes/italian-restaurant-factory';
 import { MexicanRestaurantFactory } from '../../classes/mexican-restaurant-factory';
 import { CommonModule } from '@angular/common';

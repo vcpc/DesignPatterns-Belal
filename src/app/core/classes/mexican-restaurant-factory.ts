@@ -1,12 +1,12 @@
 import { Appetizer } from '../interfaces/appetizer';
 import { Dessert } from '../interfaces/dessert';
 import { MainCourse } from '../interfaces/mainCourse';
-import { Restaurants } from '../interfaces/restaurant';
+import { RestaurantsFactory } from '../interfaces/restaurantFactory';
 import { MexicanAppetizer } from './MexicanAppetizer';
 import { MexicanDessert } from './MexicanDessert';
 import { MexicanMainCourse } from './MexicanMainCourse';
 
-export class MexicanRestaurantFactory implements Restaurants {
+export class MexicanRestaurantFactory implements RestaurantsFactory {
   createAppetizer(): Appetizer {
     return MexicanAppetizer;
   }
