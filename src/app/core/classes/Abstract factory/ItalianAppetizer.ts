@@ -1,4 +1,4 @@
-import { Appetizer } from '../interfaces/appetizer';
+import { Appetizer } from '../../interfaces/Abstract factory/appetizer';
 
 /**
  * Class representing a italian appetizer.

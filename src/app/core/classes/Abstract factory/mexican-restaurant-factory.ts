@@ -1,7 +1,7 @@
-import { Appetizer } from '../interfaces/appetizer';
-import { Dessert } from '../interfaces/dessert';
-import { MainCourse } from '../interfaces/mainCourse';
-import { RestaurantFactory } from '../interfaces/restaurantFactory';
+import { Appetizer } from '../../interfaces/Abstract factory/appetizer';
+import { Dessert } from '../../interfaces/Abstract factory/dessert';
+import { MainCourse } from '../../interfaces/Abstract factory/mainCourse';
+import { RestaurantFactory } from '../../interfaces/Abstract factory/restaurantFactory';
 import { MexicanAppetizer } from './MexicanAppetizer';
 import { MexicanDessert } from './MexicanDessert';
 import { MexicanMainCourse } from './MexicanMainCourse';

@@ -1,4 +1,4 @@
-import { MainCourse } from '../interfaces/mainCourse';
+import { MainCourse } from '../../interfaces/Abstract factory/mainCourse';
 
 /**
  * Class representing a italian mainCourse.
