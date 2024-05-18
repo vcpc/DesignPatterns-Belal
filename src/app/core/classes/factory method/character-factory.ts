@@ -1,4 +1,9 @@
+import { Injectable } from '@angular/core';
 import { Character } from '../../interfaces/Factory Method/character';
+@Injectable({
+  providedIn: 'root',
+})
+
 /**
  * Abstract base class representing a Character Factory.
  */
