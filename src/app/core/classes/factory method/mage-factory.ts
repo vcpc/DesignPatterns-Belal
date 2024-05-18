@@ -9,6 +9,7 @@ import { Mage } from './mage';
 
 /**
  * Class representing a Mage Factory that creates Mage characters.
+ *  * @extends {CharacterFactory}
  */
 export class MageFactory extends CharacterFactory {
   createCharacter(): Character {

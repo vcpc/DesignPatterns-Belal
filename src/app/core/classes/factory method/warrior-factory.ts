@@ -9,6 +9,7 @@ import { Warrior } from './warrior';
 
 /**
  * Class representing a Warrior Factory that creates Warrior characters.
+ *  * @extends {CharacterFactory}
  */
 export class WarriorFactory extends CharacterFactory {
   createCharacter(): Character {

@@ -9,6 +9,7 @@ import { CharacterFactory } from './character-factory';
 
 /**
  * Class representing an Archer Factory that creates Archer characters.
+ * @extends {CharacterFactory}
  */
 export class ArcherFactory extends CharacterFactory {
   createCharacter(): Character {
