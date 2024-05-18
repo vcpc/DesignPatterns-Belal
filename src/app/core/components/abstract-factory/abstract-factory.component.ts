@@ -1,7 +1,7 @@
-import { RestaurantFactory } from './../../interfaces/restaurantFactory';
+import { RestaurantFactory } from '../../interfaces/Abstract factory/restaurantFactory';
 import { Component } from '@angular/core';
-import { ItalianRestaurantFactory } from '../../classes/italian-restaurant-factory';
-import { MexicanRestaurantFactory } from '../../classes/mexican-restaurant-factory';
+import { ItalianRestaurantFactory } from '../../classes/Abstract factory/italian-restaurant-factory';
+import { MexicanRestaurantFactory } from '../../classes/Abstract factory/mexican-restaurant-factory';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 

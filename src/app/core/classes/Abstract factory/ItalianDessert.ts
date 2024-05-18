@@ -1,4 +1,4 @@
-import { Dessert } from '../interfaces/dessert';
+import { Dessert } from '../../interfaces/Abstract factory/dessert';
 
 /**
  * Class representing a italian dessert.
