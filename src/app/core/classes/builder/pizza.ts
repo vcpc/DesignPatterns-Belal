@@ -1,26 +1,22 @@
-/**
- * Represents a pizza object with size, crust, sauce, cheese, and toppings.
- */
 export class Pizza {
   /**
-   * Creates an instance of Pizza.
-   * @param size - The size of the pizza.
-   * @param crust - The crust type of the pizza.
-   * @param sauce - The sauce of the pizza.
-   * @param cheese - The cheese type of the pizza.
-   * @param toppings[] - An array of toppings for the pizza.
+   * The size of the pizza ('small', 'medium', 'large').
    */
-  constructor(
-    public size: string,
-    public crust: string,
-    public sauce: string,
-    public cheese: string,
-    public toppings: string[]
-  ) {
-    this.size = size;
-    this.crust = crust;
-    this.sauce = sauce;
-    this.cheese = cheese;
-    this.toppings = toppings;
-  }
+  size: string = '';
+  /**
+   * The type of crust for the pizza ('thin', 'thick', 'stuffed').
+   */
+  crust: string = '';
+  /**
+   * The sauce type used on the pizza ('tomato', 'pesto', 'white sauce').
+   */
+  sauce: string = '';
+  /**
+   * The cheese type used on the pizza ('mozzarella', 'cheddar', 'feta').
+   */
+  cheese: string = '';
+  /**
+   * An array of strings representing the toppings on the pizza (['pepperoni', 'mushrooms','onions','olives']).
+   */
+  toppings: string[] = [];
 }

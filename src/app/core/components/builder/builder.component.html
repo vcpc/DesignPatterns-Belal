@@ -1,0 +1,158 @@
+<section>
+  <hr />
+  <p>Choose Between Our Main Pizza!</p>
+  <button (click)="onMargheritaPizzaClick()">Margherita Pizza</button>
+  <button (click)="onPepperoniPizzaClick()">Pepperoni Pizza</button>
+  <p>Or! Creat Your Own Pizza ?</p>
+  <form [formGroup]="customPizzaForm" (ngSubmit)="onCustomPizzaSubmit()">
+    <table>
+      <tbody>
+        <tr>
+          <td>
+            <label for="customPizzaSize">size: </label>
+          </td>
+          <td>
+            <select
+              formControlName="size"
+              name="customPizzaSize"
+              id="customPizzaSize"
+            >
+              <option selected disabled value="">-- Select Size --</option>
+              <option>small</option>
+              <option>medium</option>
+              <option>large</option>
+            </select>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <label for="customPizzaCrust">crust: </label>
+          </td>
+          <td>
+            <select
+              formControlName="crust"
+              name="customPizzaCrust"
+              id="customPizzaCrust"
+            >
+              <option selected disabled value="">-- Select crust --</option>
+              <option>thin</option>
+              <option>thick</option>
+              <option>stuffed</option>
+            </select>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <label for="customPizzaSauce">sauce: </label>
+          </td>
+          <td>
+            <select
+              formControlName="sauce"
+              name="customPizzaSauce"
+              id="customPizzaSauce"
+            >
+              <option selected disabled value="">-- Select sauce --</option>
+              <option>tomato</option>
+              <option>pesto</option>
+              <option>white sauce</option>
+            </select>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <label for="customPizzaCheese">cheese: </label>
+          </td>
+          <td>
+            <select
+              formControlName="cheese"
+              name="customPizzaCheese"
+              id="customPizzaCheese"
+            >
+              <option selected disabled value="">-- Select cheese --</option>
+              <option>mozzarella</option>
+              <option>cheddar</option>
+              <option>feta</option>
+            </select>
+          </td>
+        </tr>
+        <tr>
+          <td>toppings:</td>
+          <td>
+            <label
+              ><input
+                (change)="onCheckboxChange($event)"
+                type="checkbox"
+                name="topping"
+                value="pepperoni"
+              />
+              Pepperoni</label
+            >
+          </td>
+          <td>
+            <label
+              ><input
+                (change)="onCheckboxChange($event)"
+                type="checkbox"
+                name="topping"
+                value="mushrooms"
+              />
+              Mushrooms</label
+            >
+          </td>
+          <td>
+            <label
+              ><input
+                (change)="onCheckboxChange($event)"
+                type="checkbox"
+                name="topping"
+                value="onions"
+              />
+              Onions</label
+            >
+          </td>
+          <td>
+            <label
+              ><input
+                (change)="onCheckboxChange($event)"
+                type="checkbox"
+                name="topping"
+                value="olives"
+              />
+              Olives</label
+            ><br />
+          </td>
+        </tr>
+      </tbody>
+    </table>
+    <button>Custom Pizza</button>
+    @if (customPizzaForm.invalid && startValidation) {
+    <p style="color: red; font-weight: bold; font-style: italic">
+      All fields required*
+    </p>
+    }
+  </form>
+  @if (pizza && !startValidation) {
+  <h3>Your Order >></h3>
+  <ul>
+    <li>
+      <p>{{ pizza.size }}</p>
+    </li>
+    <li>
+      <p>{{ pizza.crust }}</p>
+    </li>
+    <li>
+      <p>{{ pizza.sauce }}</p>
+    </li>
+    <li>
+      <p>{{ pizza.cheese }}</p>
+    </li>
+    <p>Topping:</p>
+    @for (item of pizza.toppings; track $index) {
+    <li>
+      <p>{{ item }}</p>
+    </li>
+    }
+  </ul>
+
+  }
+</section>

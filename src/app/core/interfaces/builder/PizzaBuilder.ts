@@ -1,42 +1,27 @@
-import { Pizza } from '../../classes/builder/pizza';
-
-/**
- * Interface for defining a pizza builder.
- */
 export interface PizzaBuilder {
   /**
-   * Sets the size of the pizza.
-   * @param size - The `size` of the pizza.
+   * Sets the size of the pizza being built.
+   * @param size The desired size of the pizza ('small', 'medium', 'large').
    */
   setSize(size: string): void;
-
   /**
-   * Sets the crust type of the pizza.
-   * @param crust - The `crust` type of the pizza.
+   * Sets the crust type of the pizza being built.
+   * @param crust The desired crust type ('thin', 'thick', 'stuffed').
    */
   setCrust(crust: string): void;
-
   /**
-   * Sets the sauce of the pizza.
-   * @param sauce - The `sauce` of the pizza.
+   * Sets the sauce type of the pizza being built.
+   * @param sauce The desired sauce type ('tomato', 'pesto', 'white sauce').
    */
   setSauce(sauce: string): void;
-
   /**
-   * Sets the cheese type of the pizza.
-   * @param cheese - The `cheese` type of the pizza.
+   * Sets the cheese type of the pizza being built.
+   * @param cheese The desired cheese type ('mozzarella', 'cheddar', 'feta').
    */
   setCheese(cheese: string): void;
-
   /**
-   * Sets the toppings of the pizza.
-   * @param toppings - An array of `toppings` for the pizza.
+   * Sets the toppings for the pizza being built.
+   * @param toppings An array of strings representing the desired toppings (['pepperoni', 'mushrooms','onions','olives']).
    */
   setToppings(toppings: string[]): void;
-
-  /**
-   * Constructs and returns a `Pizza` object based on the builder's configuration.
-   * @returns A Pizza object representing the configured pizza.
-   */
-  build(): Pizza;
 }
