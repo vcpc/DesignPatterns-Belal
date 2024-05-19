@@ -1,66 +1,54 @@
 import { PizzaBuilder } from '../../interfaces/builder/PizzaBuilder';
 import { Pizza } from './pizza';
-
 /**
- * Concrete implementation of PizzaBuilder interface.
- * Constructs a Pizza object step by step.
+ * This class implements the PizzaBuilder interface, providing a concrete way to construct Pizza objects step-by-step.
+ * @implements {PizzaBuilder}
  */
 export class ConcretePizzaBuilder implements PizzaBuilder {
-  private pizza: Pizza;
-
   /**
-   * Constructs a new ConcretePizzaBuilder instance.
-   * Initializes the pizza with default values.
+   * The Pizza object being built.
    */
-  constructor() {
-    this.pizza = new Pizza('', '', '', '', []);
-  }
-
+  Pizza: Pizza = new Pizza();
   /**
-   * Sets the size of the pizza.
-   * @param size - The size of the pizza.
+   * Sets the size of the pizza being built.
+   * @param size The desired size of the pizza ('small', 'medium', 'large').
    */
   setSize(size: string): void {
-    this.pizza.size = size;
+    this.Pizza.size = size;
   }
-
   /**
-   * Sets the crust type of the pizza.
-   * @param crust - The crust type of the pizza.
+   * Sets the crust type of the pizza being built.
+   * @param crust The desired crust type ('thin', 'thick', 'stuffed').
    */
   setCrust(crust: string): void {
-    this.pizza.crust = crust;
+    this.Pizza.crust = crust;
   }
-
   /**
-   * Sets the sauce of the pizza.
-   * @param sauce - The sauce of the pizza.
+   * Sets the sauce type of the pizza being built.
+   * @param sauce The desired sauce type ('tomato', 'pesto', 'white sauce').
    */
   setSauce(sauce: string): void {
-    this.pizza.sauce = sauce;
+    this.Pizza.sauce = sauce;
   }
-
   /**
-   * Sets the cheese type of the pizza.
-   * @param cheese - The cheese type of the pizza.
+   * Sets the cheese type of the pizza being built.
+   * @param cheese The desired cheese type ('mozzarella', 'cheddar', 'feta').
    */
   setCheese(cheese: string): void {
-    this.pizza.cheese = cheese;
+    this.Pizza.cheese = cheese;
   }
-
   /**
-   * Sets the toppings of the pizza.
-   * @param toppings - An array of toppings for the pizza.
+   * Sets the toppings for the pizza being built.
+   * @param toppings An array of strings representing the desired toppings (['pepperoni', 'mushrooms']).
    */
   setToppings(toppings: string[]): void {
-    this.pizza.toppings = toppings;
+    this.Pizza.toppings = toppings;
   }
-
   /**
-   * Constructs and returns the Pizza object configured by this builder.
-   * @returns A Pizza object representing the configured pizza.
+   * Returns the complete Pizza object that has been built step-by-step.
+   * @returns A new Pizza object with the configured size, crust, sauce, cheese, and toppings.
    */
   build(): Pizza {
-    return this.pizza;
+    return this.Pizza;
   }
 }
